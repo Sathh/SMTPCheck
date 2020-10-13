@@ -21,6 +21,7 @@ namespace SMTPCheck
                 SmtpServer.Credentials = new System.Net.NetworkCredential(usrName, pass);
                 SmtpServer.EnableSsl = ssl;
                 SmtpServer.Send(Mail);
+                MainForm.btnVisibility = true;
             }
             catch (SmtpException sx)
             {
@@ -28,46 +29,55 @@ namespace SMTPCheck
                 if (statusCode == "GeneralFailure")
                 {
                     MessageBox.Show("Chyba spojenia so serverom");
+                    MainForm.btnVisibility = true;
                     return;
                 }
                 if (statusCode == "ExceededStorageAllocation")
                 {
                     MessageBox.Show("Správa je príliž veľká");
+                    MainForm.btnVisibility = true;
                     return;
                 }
                 if (statusCode == "MustIssueStartTlsFirst")
                 {
                     MessageBox.Show("Skontroluj SSL/TLS alebo Chyba prihlasovania");
+                    MainForm.btnVisibility = true;
                     return;
                 }
                 if (statusCode == "TransactionFailed")
                 {
                     MessageBox.Show("Prenos zlyhal");
+                    MainForm.btnVisibility = true;
                     return;
                 }
                 if (statusCode == "ClientNotPermitted")
                 {
                     MessageBox.Show("Užívateľ nemá povolenie na odosielanie");
+                    MainForm.btnVisibility = true;
                     return;
                 }
                 if (statusCode == "MailboxBusy")
                 {
                     MessageBox.Show("Adresa sa práve používa");
+                    MainForm.btnVisibility = true;
                     return;
                 }
             }
             catch (AuthenticationException)
             {
                 MessageBox.Show("Chyba prihlasovania");
+                MainForm.btnVisibility = true;
             }
             catch (FormatException)
             {
                 MessageBox.Show("Zadaj správne e-mailovú adresu");
+                MainForm.btnVisibility = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Vyskytla sa chyba");
                 MessageBox.Show(Convert.ToString(ex));
+                MainForm.btnVisibility = true;
             }
         }
     }

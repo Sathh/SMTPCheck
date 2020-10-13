@@ -10,8 +10,25 @@ namespace SMTPCheck
         {
             InitializeComponent();
         }
+        public static bool btnVisibility;
+        private void btnTimer()
+        {
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 1000;
+            timer.Tick += new EventHandler(refreshBtn);
+            timer.Enabled = true;
+            timer.Start();
+        }
+        private void refreshBtn(object o, EventArgs eventA)
+        {
+            if (btnVisibility == true)
+                runButton.Visible = true;
+        }
         private void runButton_Click(object sender, EventArgs e)
         {
+            btnVisibility = false;
+            runButton.Visible = false;
+            btnTimer();
             if (string.IsNullOrWhiteSpace(addressBox.Text))
             {
                 MessageBox.Show("Zadaj IP adresu alebo hostname SMTP servera", "Chyba!", MessageBoxButtons.OK, MessageBoxIcon.Error);

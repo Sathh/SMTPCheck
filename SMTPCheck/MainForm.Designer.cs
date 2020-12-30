@@ -156,7 +156,7 @@
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Items.AddRange(new object[] {
             "",
-            "21",
+            "25",
             "465",
             "587"});
             this.comboBox.Location = new System.Drawing.Point(527, 86);

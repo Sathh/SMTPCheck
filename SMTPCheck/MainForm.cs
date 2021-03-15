@@ -39,15 +39,18 @@ namespace SMTPCheck
                 MessageBox.Show("Zadaj port SMTP servera", "Chyba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(usrNameBox.Text))
+            if (checkBox1.Checked == false)
             {
-                MessageBox.Show("Zadaj prihlasovacie meno", "Chyba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrWhiteSpace(passBox.Text))
-            {
-                MessageBox.Show("Zadaj prihlasovacie heslo", "Chyba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (string.IsNullOrWhiteSpace(usrNameBox.Text))
+                {
+                    MessageBox.Show("Zadaj prihlasovacie meno", "Chyba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(passBox.Text))
+                {
+                    MessageBox.Show("Zadaj prihlasovacie heslo", "Chyba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
             if (string.IsNullOrWhiteSpace(fromBox.Text))
             {
@@ -72,6 +75,24 @@ namespace SMTPCheck
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             portBox.Text = comboBox.Text;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                usrNameBox.Visible = false;
+                passBox.Visible = false;
+                usrNameLabel.Visible = false;
+                passLabel.Visible = false;
+            }
+            else
+            {
+                usrNameBox.Visible = true;
+                passBox.Visible = true;
+                usrNameLabel.Visible = true;
+                passLabel.Visible = true;
+            }
         }
     }
 }

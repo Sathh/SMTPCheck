@@ -18,7 +18,10 @@ namespace SMTPCheck
                 Mail.Subject = "Test";
                 Mail.Body = DateTime.Now.ToString();
                 SmtpServer.Port = port;
-                SmtpServer.Credentials = new System.Net.NetworkCredential(usrName, pass);
+                if (usrName != null && pass != null)
+                {
+                    SmtpServer.Credentials = new System.Net.NetworkCredential(usrName, pass);
+                }
                 SmtpServer.EnableSsl = ssl;
                 SmtpServer.Send(Mail);
                 MainForm.btnVisibility = true;

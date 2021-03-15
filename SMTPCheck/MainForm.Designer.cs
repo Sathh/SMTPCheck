@@ -31,11 +31,12 @@
             this.toBox = new System.Windows.Forms.TextBox();
             this.toLabel = new System.Windows.Forms.Label();
             this.comboBox = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // addressBox
             // 
-            this.addressBox.Location = new System.Drawing.Point(195, 50);
+            this.addressBox.Location = new System.Drawing.Point(179, 18);
             this.addressBox.Name = "addressBox";
             this.addressBox.Size = new System.Drawing.Size(326, 20);
             this.addressBox.TabIndex = 0;
@@ -43,7 +44,7 @@
             // sslCheckBox
             // 
             this.sslCheckBox.AutoSize = true;
-            this.sslCheckBox.Location = new System.Drawing.Point(527, 53);
+            this.sslCheckBox.Location = new System.Drawing.Point(511, 21);
             this.sslCheckBox.Name = "sslCheckBox";
             this.sslCheckBox.Size = new System.Drawing.Size(71, 17);
             this.sslCheckBox.TabIndex = 7;
@@ -52,14 +53,14 @@
             // 
             // usrNameBox
             // 
-            this.usrNameBox.Location = new System.Drawing.Point(195, 124);
+            this.usrNameBox.Location = new System.Drawing.Point(179, 91);
             this.usrNameBox.Name = "usrNameBox";
             this.usrNameBox.Size = new System.Drawing.Size(326, 20);
             this.usrNameBox.TabIndex = 2;
             // 
             // passBox
             // 
-            this.passBox.Location = new System.Drawing.Point(195, 161);
+            this.passBox.Location = new System.Drawing.Point(179, 128);
             this.passBox.Name = "passBox";
             this.passBox.PasswordChar = 'x';
             this.passBox.Size = new System.Drawing.Size(326, 20);
@@ -68,7 +69,7 @@
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
-            this.addressLabel.Location = new System.Drawing.Point(24, 53);
+            this.addressLabel.Location = new System.Drawing.Point(8, 21);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(165, 13);
             this.addressLabel.TabIndex = 7;
@@ -77,7 +78,7 @@
             // portLabel
             // 
             this.portLabel.AutoSize = true;
-            this.portLabel.Location = new System.Drawing.Point(163, 90);
+            this.portLabel.Location = new System.Drawing.Point(147, 58);
             this.portLabel.Name = "portLabel";
             this.portLabel.Size = new System.Drawing.Size(26, 13);
             this.portLabel.TabIndex = 8;
@@ -86,7 +87,7 @@
             // usrNameLabel
             // 
             this.usrNameLabel.AutoSize = true;
-            this.usrNameLabel.Location = new System.Drawing.Point(94, 127);
+            this.usrNameLabel.Location = new System.Drawing.Point(78, 95);
             this.usrNameLabel.Name = "usrNameLabel";
             this.usrNameLabel.Size = new System.Drawing.Size(95, 13);
             this.usrNameLabel.TabIndex = 9;
@@ -95,7 +96,7 @@
             // passLabel
             // 
             this.passLabel.AutoSize = true;
-            this.passLabel.Location = new System.Drawing.Point(155, 164);
+            this.passLabel.Location = new System.Drawing.Point(139, 132);
             this.passLabel.Name = "passLabel";
             this.passLabel.Size = new System.Drawing.Size(34, 13);
             this.passLabel.TabIndex = 10;
@@ -103,7 +104,7 @@
             // 
             // fromBox
             // 
-            this.fromBox.Location = new System.Drawing.Point(195, 198);
+            this.fromBox.Location = new System.Drawing.Point(179, 165);
             this.fromBox.Name = "fromBox";
             this.fromBox.Size = new System.Drawing.Size(326, 20);
             this.fromBox.TabIndex = 4;
@@ -111,7 +112,7 @@
             // fromLabel
             // 
             this.fromLabel.AutoSize = true;
-            this.fromLabel.Location = new System.Drawing.Point(107, 201);
+            this.fromLabel.Location = new System.Drawing.Point(91, 169);
             this.fromLabel.Name = "fromLabel";
             this.fromLabel.Size = new System.Drawing.Size(82, 13);
             this.fromLabel.TabIndex = 12;
@@ -120,7 +121,7 @@
             // runButton
             // 
             this.runButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.runButton.Location = new System.Drawing.Point(195, 280);
+            this.runButton.Location = new System.Drawing.Point(179, 248);
             this.runButton.Name = "runButton";
             this.runButton.Size = new System.Drawing.Size(326, 69);
             this.runButton.TabIndex = 6;
@@ -130,14 +131,14 @@
             // 
             // portBox
             // 
-            this.portBox.Location = new System.Drawing.Point(195, 87);
+            this.portBox.Location = new System.Drawing.Point(179, 54);
             this.portBox.Name = "portBox";
             this.portBox.Size = new System.Drawing.Size(326, 20);
             this.portBox.TabIndex = 1;
             // 
             // toBox
             // 
-            this.toBox.Location = new System.Drawing.Point(195, 235);
+            this.toBox.Location = new System.Drawing.Point(179, 202);
             this.toBox.Name = "toBox";
             this.toBox.Size = new System.Drawing.Size(326, 20);
             this.toBox.TabIndex = 5;
@@ -145,7 +146,7 @@
             // toLabel
             // 
             this.toLabel.AutoSize = true;
-            this.toLabel.Location = new System.Drawing.Point(74, 238);
+            this.toLabel.Location = new System.Drawing.Point(58, 206);
             this.toLabel.Name = "toLabel";
             this.toLabel.Size = new System.Drawing.Size(115, 13);
             this.toLabel.TabIndex = 16;
@@ -159,17 +160,29 @@
             "25",
             "465",
             "587"});
-            this.comboBox.Location = new System.Drawing.Point(527, 86);
+            this.comboBox.Location = new System.Drawing.Point(511, 54);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(61, 21);
             this.comboBox.TabIndex = 17;
             this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(511, 95);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(88, 17);
+            this.checkBox1.TabIndex = 18;
+            this.checkBox1.Text = "Bez overenia";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 361);
+            this.ClientSize = new System.Drawing.Size(608, 324);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.toLabel);
             this.Controls.Add(this.toBox);
@@ -210,5 +223,6 @@
         private System.Windows.Forms.TextBox toBox;
         private System.Windows.Forms.Label toLabel;
         private System.Windows.Forms.ComboBox comboBox;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

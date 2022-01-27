@@ -46,9 +46,9 @@
             this.sslCheckBox.AutoSize = true;
             this.sslCheckBox.Location = new System.Drawing.Point(511, 21);
             this.sslCheckBox.Name = "sslCheckBox";
-            this.sslCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.sslCheckBox.Size = new System.Drawing.Size(68, 17);
             this.sslCheckBox.TabIndex = 7;
-            this.sslCheckBox.Text = "SSL/TLS";
+            this.sslCheckBox.Text = "SSL only";
             this.sslCheckBox.UseVisualStyleBackColor = true;
             // 
             // usrNameBox
